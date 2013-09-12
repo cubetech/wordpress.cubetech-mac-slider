@@ -1,0 +1,27 @@
+.cubetech-mac-slider-container { margin-right: 20px; margin-top: 20px; }
+
+.cubetech-mac-slider-background { background: url(../img/imac.png) no-repeat center center; width: 100%; height: 550px; padding-top: 55px; }
+.cubetech-mac-slider { padding: 0; margin: 0; display: inline-block; width: 590px; height: 334px; overflow: hidden; position: relative; }
+.cubetech-mac-slider li { padding: 0; display: inline-block; list-style: none; position: absolute; text-align: center; box-sizing: border-box; display: none; top: 0; }
+
+.cubetech-mac-slider-icon { padding: 20px 6px 0; }
+.cubetech-mac-slider-active {  }
+.cubetech-mac-slider-icon p { text-align: center; margin-top: 20px; vertical-align: middle; }
+.cubetech-mac-slider-empty { padding: 0; padding-left: 100%; }
+
+.cubetech-mac-slider-content { position: relative; min-height: 195px; }
+.cubetech-mac-slider-slide { position: absolute; top: 0; left: 0; width: 100%; display: none; }
+
+.cubetech-mac-slider-thumb-second { display: none; position: absolute; top: 20px; left: 0; right: 0; margin-left: auto; margin-right: auto; }
+.cubetech-mac-slider-thumb { position: relative; top: 0; left: 0; right: 0; margin-left: auto; margin-right: auto; }
+
+.cubetech-mac-slider-link { display: inline-block; background: url(../img/cubetech-mac-slider-button.png) no-repeat center center; height: 50px; width: 132px; line-height: 50px; text-align: center; }
+.cubetech-mac-slider-link a { color: white; text-decoration: none; display: inline-block; height: 100%; width: 100%; text-align: center; }
+.cubetech-mac-slider-link a:hover { color: white; }
+
+@media (max-width: 979px) {
+	
+	.cubetech-mac-slider-icon { padding: 20px 2px 0; }
+	.cubetech-mac-slider-icon p { font-size: 11px; min-height: 40px; display: inline-block; }
+	
+}
