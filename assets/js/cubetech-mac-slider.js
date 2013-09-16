@@ -18,7 +18,7 @@ jQuery(function() {
 	var next=2;
 	var total_slide=jQuery('.cubetech-mac-slider').children().length;
 
-	cubetechTimeOut = setTimeout(cubetechShowDiv, 5000);
+	cubetechTimeOut = setTimeout(cubetechShowDiv, 8000);
 	
 	jQuery('.cubetech-mac-slider-icon').first().fadeIn();
 	jQuery('.cubetech-mac-slider-slide').first().fadeIn();
@@ -43,7 +43,7 @@ jQuery(function() {
 	            next=1;
 	        }
 	        
-	        cubetechTimeOut = setTimeout(cubetechShowDiv, 5000);
+	        cubetechTimeOut = setTimeout(cubetechShowDiv, 8000);
 	        
 	    }
 	}
