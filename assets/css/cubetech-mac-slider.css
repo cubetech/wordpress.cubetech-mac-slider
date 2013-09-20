@@ -9,6 +9,10 @@
 .cubetech-mac-slider-icon p { text-align: center; margin-top: 20px; vertical-align: middle; }
 .cubetech-mac-slider-empty { padding: 0; padding-left: 100%; }
 
+.cubetech-mac-slider-menu ul { width: auto; display: inline-block; padding: 0; list-style: none; }
+.cubetech-mac-slider-menu ul li { display: inline-block; float: left; text-indent: -9000px; background: url(../img/dot.png) no-repeat center center; width: 14px; height: 14px; padding: 10px; cursor: pointer; }
+.cubetech-mac-slider-menu ul li.cubetech-mac-slider-control-active { background-image: url(../img/dot-active.png); }
+
 .cubetech-mac-slider-content { position: relative; min-height: 195px; }
 .cubetech-mac-slider-slide { position: absolute; top: 0; left: 0; width: 100%; display: none; }
 

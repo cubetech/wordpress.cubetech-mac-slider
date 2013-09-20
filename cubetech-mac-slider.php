@@ -3,7 +3,7 @@
  * Plugin Name: cubetech Mac Slider
  * Plugin URI: http://www.cubetech.ch
  * Description: cubetech Mac Slider - a funny slider that slides in a mac screen :)
- * Version: 1.0
+ * Version: 1.0.1
  * Author: cubetech GmbH
  * Author URI: http://www.cubetech.ch
  */
