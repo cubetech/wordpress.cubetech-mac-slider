@@ -113,8 +113,13 @@ function cubetech_mac_slider_content($posts) {
 	}
 	
 	$controls .= '</ul></div>';
+	$slidercontent .= '</div>';
 	
-	return $contentreturn . '</ul></div> ' . $controls . ' ' . $slidercontent . '</div>';
+	if(get_option('cubetech_mac_slider_show_content')!='checked') {
+		$slidercontent = '';
+	}
+	
+	return $contentreturn . '</ul></div> ' . $controls . ' ' . $slidercontent;
 	
 }
 ?>

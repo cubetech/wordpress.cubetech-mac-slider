@@ -2,6 +2,7 @@
 
 	function cubetech_mac_slider_activate() {
 		update_option( 'cubetech_mac_slider_link_title', 'Mehr erfahren' );
+		update_option( 'cubetech_mac_slider_show_content', 'checked' );
 	}
 	register_activation_hook( __FILE__, 'cubetech_mac_slider_activate' );
 
@@ -17,6 +18,7 @@
 	        return;
 
 		delete_option( 'cubetech_mac_slider_link_title' );
+		delete_option( 'cubetech_mac_slider_show_content' );
 
 	}
 	register_uninstall_hook( __FILE__, 'cubetech_mac_slider_uninstall' );
