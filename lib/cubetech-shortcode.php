@@ -48,6 +48,7 @@ function cubetech_mac_slider_content($posts) {
 
 	$contentreturn = '<div class="cubetech-mac-slider-background"><ul class="cubetech-mac-slider">';
 	$slidercontent = '<div class="cubetech-mac-slider-content">';
+	$controls = '<div class="cubetech-mac-slider-menu"><ul>';
 	
 	$i = 1;
 	
@@ -97,10 +98,11 @@ function cubetech_mac_slider_content($posts) {
 			' . $secondimage . '
 		</li>';
 		
+		$controls .= '<li class="cubetech-mac-slider-control" id="cubetech-mac-slider-control-' . $i . '">xxxx</li>';
+		
 		$slidercontent .= '
 		<div class="cubetech-mac-slider-slide" id="cubetech-mac-slider-slide-' . $i . '">
 			<p>' . $post_meta_data['cubetech_mac_slider_imagetitle'][0] . '</p>
-			<span class="cubetech-mac-slider-thumb-active-icon">&nbsp;</span>
 			' . $title . '
 			<p>' . __(nl2br($post->post_content)) . '</p>
 			<p>' . $link . '</p>
@@ -110,8 +112,14 @@ function cubetech_mac_slider_content($posts) {
 
 	}
 	
+	$controls .= '</ul></div>';
+	$slidercontent .= '</div>';
 	
-	return $contentreturn . '</ul></div> ' . $slidercontent . '</div>';
+	if(get_option('cubetech_mac_slider_show_content')!='checked') {
+		$slidercontent = '';
+	}
+	
+	return $contentreturn . '</ul></div> ' . $controls . ' ' . $slidercontent;
 	
 }
 ?>

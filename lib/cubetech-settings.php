@@ -18,6 +18,7 @@ function cubetech_mac_slider_create_menu() {
 function register_cubetech_mac_slider_settings() {
 	//register our settings
 	register_setting( 'cubetech-mac-slider-settings-group', 'cubetech_mac_slider_link_title' );
+	register_setting( 'cubetech-mac-slider-settings-group', 'cubetech_mac_slider_show_content' );
 }
 
 function cubetech_mac_slider_settings_page() {
@@ -32,6 +33,11 @@ function cubetech_mac_slider_settings_page() {
         <tr valign="top">
         <th scope="row">Name des weiterführenden Links</th>
         <td><input type="text" name="cubetech_mac_slider_link_title" value="<?php echo get_option('cubetech_mac_slider_link_title'); ?>" /></td>
+        </tr>
+         
+        <tr valign="top">
+        <th scope="row">Text anzeigen</th>
+        <td><input type="checkbox" name="cubetech_mac_slider_show_content" value="checked" <?php echo get_option('cubetech_mac_slider_show_content'); ?> /></td>
         </tr>
          
     </table>
