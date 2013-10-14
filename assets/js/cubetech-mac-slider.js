@@ -24,7 +24,9 @@ jQuery(function() {
 	jQuery('.cubetech-mac-slider-slide').first().fadeIn();
 
 	function cubetechShowDiv() {
-	    if(jQuery('.cubetech-icon-slider-icon').length) {
+	    if(jQuery('.cubetech-mac-slider-icon').length) {
+	    
+	    	clearTimeout(cubetechTimeOut);
 
 	        if(present > 0) {
 		        jQuery("#cubetech-mac-slider-icon-"+present).fadeOut();
