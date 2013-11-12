@@ -4,7 +4,7 @@ Donate link: http://www.cubetech.ch
 Tags: slider, icon, jquery, cubetech, content, custom, post, type, customizable, tinymce, category, filter, jquery, options
 Requires at least: 3.4
 Tested up to: 3.6
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
