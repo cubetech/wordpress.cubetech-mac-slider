@@ -24,7 +24,7 @@ function cubetech_mac_slider_shortcode($atts)
 		'order'           	=> $order,
 		'post_type'       	=> 'cubetech_mac_slider',
 		'post_status'     	=> $poststatus,
-		'suppress_filters' 	=> true,
+		'suppress_filters' 	=> false,
 	);
 		
 	$posts = get_posts($args);
