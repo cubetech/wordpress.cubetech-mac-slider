@@ -31,15 +31,22 @@ jQuery(function() {
 
 	        if(present > 0) {
 		        jQuery("#cubetech-mac-slider-icon-"+present).fadeOut();
-		        jQuery("#cubetech-mac-slider-slide-"+present).fadeOut();
+		        if(jQuery("#cubetech-mac-slider-slide-"+next).length) {
+		        	jQuery("#cubetech-mac-slider-slide").fadeOut();
+				}
 		        jQuery("#cubetech-mac-slider-control-"+present).removeClass('cubetech-mac-slider-control-active');
 		    } else {
 			    jQuery('.cubetech-mac-slider-icon').fadeOut();
-			    jQuery('.cubetech-mac-slider-slide').fadeOut();
+			    if(jQuery("#cubetech-mac-slider-slide-"+next).length) {
+			    	jQuery('.cubetech-mac-slider-slide').fadeOut();
+			    }
 		        jQuery('.cubetech-mac-slider-control').removeClass('cubetech-mac-slider-control-active');
 		    }
 	        jQuery("#cubetech-mac-slider-icon-"+next).fadeIn(1000);
-	        jQuery("#cubetech-mac-slider-slide-"+next).fadeIn(1000);
+		    if(jQuery("#cubetech-mac-slider-slide-"+next).length) {
+		    	jQuery('.cubetech-mac-slider-slide').fadeOut();
+				jQuery("#cubetech-mac-slider-slide-"+next).fadeIn(1000);
+			}
 		    jQuery("#cubetech-mac-slider-control-"+next).addClass('cubetech-mac-slider-control-active');
 		    present=next;
 	        next++;

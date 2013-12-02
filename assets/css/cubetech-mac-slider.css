@@ -14,7 +14,8 @@
 .cubetech-mac-slider-menu ul li.cubetech-mac-slider-control-active { background-image: url(../img/dot-active.png); }
 
 .cubetech-mac-slider-content { position: relative; min-height: 195px; }
-.cubetech-mac-slider-slide { position: absolute; top: 0; left: 0; width: 100%; display: none; }
+.cubetech-mac-slider-slide { position: absolute; top: 0; left: 0; width: 90%; display: none; text-align: left !important; }
+.cubetech-mac-slider-slide h2 { text-align: left; padding: 0; margin-bottom: 40px; }
 
 .cubetech-mac-slider-thumb-second { display: none; position: absolute; top: 20px; left: 0; right: 0; margin-left: auto; margin-right: auto; }
 .cubetech-mac-slider-thumb { position: relative; top: 0; left: 0; right: 0; margin-left: auto; margin-right: auto; }

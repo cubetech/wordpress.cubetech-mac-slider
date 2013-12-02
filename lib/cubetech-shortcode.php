@@ -9,8 +9,8 @@ function cubetech_mac_slider_shortcode($atts)
 		'poststatus'	=> 'publish',
 	), $atts));
 	
-	$return = '';	
-
+	$return = '';
+	$leftcontent = '<div class="cubetech-mac-slider-container">';
 	$return .= '<div class="cubetech-mac-slider-container">';
 	
 	if ( get_option('cubetech_mac_slider_show_groups') != false )
@@ -29,7 +29,9 @@ function cubetech_mac_slider_shortcode($atts)
 		
 	$posts = get_posts($args);
 	
-	$return .= cubetech_mac_slider_content($posts);
+	$slidercontents = cubetech_mac_slider_content($posts);
+	$leftcontent .= $slidercontents[0];
+	$return .= $slidercontents[1];
 	
 	$return .= '<div class="cubetech-mac-slider-clear">';
 	
@@ -37,8 +39,9 @@ function cubetech_mac_slider_shortcode($atts)
 		$return .= '<hr />';
 	
 	$return .= '</div></div>';
-		
-	return $return;
+	$leftcontent .= '</div>';
+	
+	return $leftcontent . $return;
 
 }
 
@@ -63,7 +66,7 @@ function cubetech_mac_slider_content($posts) {
 		
 		$titlelink = array('', '');
 		
-		$title = '<h3 class="cubetech-mac-slider-title">' . $post->post_title . '</h3>';
+		$title = '<h2 class="cubetech-mac-slider-title">' . $post->post_title . '</h2>';
 		
 		$image = get_the_post_thumbnail( $post->ID, 'cubetech-mac-slider-thumb', array('class' => 'cubetech-mac-slider-thumb cubetech-mac-slider-slide-' . $i ) );
 		$secondimage = false;
@@ -100,13 +103,15 @@ function cubetech_mac_slider_content($posts) {
 		
 		$controls .= '<li class="cubetech-mac-slider-control" id="cubetech-mac-slider-control-' . $i . '">xxxx</li>';
 		
-		$slidercontent .= '
-		<div class="cubetech-mac-slider-slide" id="cubetech-mac-slider-slide-' . $i . '">
-			<p>' . $post_meta_data['cubetech_mac_slider_imagetitle'][0] . '</p>
-			' . $title . '
-			<p>' . __(nl2br($post->post_content)) . '</p>
-			<p>' . $link . '</p>
-		</div>';
+		if($post->post_content != '' || $post->post_title != '') {
+			$slidercontent .= '
+			<div class="cubetech-mac-slider-slide" id="cubetech-mac-slider-slide-' . $i . '">
+				<p>' . $post_meta_data['cubetech_mac_slider_imagetitle'][0] . '</p>
+				' . $title . '
+				<p>' . __(nl2br($post->post_content)) . '</p>
+				<p>' . $link . '</p>
+			</div>';
+		}
 		
 		$i++;
 
@@ -119,7 +124,7 @@ function cubetech_mac_slider_content($posts) {
 		$slidercontent = '';
 	}
 	
-	return $contentreturn . '</ul></div> ' . $controls . ' ' . $slidercontent;
+	return array(0 => $slidercontent, 1 => $contentreturn . '</ul></div> ' . $controls);
 	
 }
 ?>
